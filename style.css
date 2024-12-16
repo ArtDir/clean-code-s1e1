@@ -15,8 +15,7 @@
 
 .matrix__image {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  max-height: 260px;
 }
 
 .matrix__link {
@@ -77,10 +76,18 @@
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
+}
+
+.task__label {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
 }
 
 .task__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -106,13 +113,21 @@
   text-decoration: line-through;
 }
 
+.task__item_completed .task__label {
+  color: #888;
+  text-decoration: line-through;
+}
+
 .task__item_editing .task__input {
   display: inline-block;
-  width: 224px;
 }
 
 .task__item_editing .task__label {
   display: none;
+}
+
+.task__item_editing .task__input {
+  width: 224px;
 }
 
 /* Button Block */
