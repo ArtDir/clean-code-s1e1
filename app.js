@@ -9,10 +9,16 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput = document.getElementById("new-task");//Add a new task.
-var addButton = document.getElementsByTagName("button")[0];//first button
+var addButton = document.querySelector(".add-task button");//first button
 var incompleteTaskHolder = document.getElementById("todo-list");//ul of #incompleteTasks
 var completedTasksHolder = document.getElementById("done-list");//completed-tasks
+var taskForm = document.getElementById("add-task");//form
 
+// Prevent form submission
+taskForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+  addTask();
+});
 
 //New task list item
 var createNewTaskElement = function(taskString) {
@@ -134,7 +140,6 @@ var ajaxRequest = function() {
 //The glue to hold it all together.
 
 //Set the click handler to the addTask function.
-addButton.onclick = addTask;
 addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", ajaxRequest);
 
