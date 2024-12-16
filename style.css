@@ -7,7 +7,7 @@
 
 /* Matrix Block */
 .matrix {
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
   display: block;
   text-align: right;
@@ -30,7 +30,7 @@
 /* Todo App Block */
 .todo-app {
   display: block;
-  width: 500px;
+  width: 800px;
   margin: 0 auto 0;
 }
 
@@ -43,6 +43,7 @@
 
 .task__row {
   display: flex;
+  gap: 10px;
 }
 
 .task__list {
@@ -58,6 +59,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .task__item > * {
@@ -73,7 +75,7 @@
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
+  width: 400px;
 }
 
 .task__input {
@@ -104,7 +106,7 @@
 
 .task__item_editing .task__input {
   display: inline-block;
-  width: 224px;
+  width: 400px;
 }
 
 .task__item_editing .task__label {
@@ -117,10 +119,11 @@
   border: 0;
   color: #888;
   font-size: 15px;
-  width: 60px;
+  min-width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
   outline: none;
+  padding: 0 10px;
 }
 
 .button:hover {
@@ -166,5 +169,5 @@
 }
 
 .add-task__input {
-  width: 318px;
+  width: 500px;
 }
