@@ -128,14 +128,11 @@ label[for="new-task"] {
   margin: 0 10px;
 }
 
-.task-item > label {
+.task-item > label,
+.task-item > .task[type="text"] {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
-}
-
-.task-item > .task[type="text"] {
   width: 226px;
 }
 
