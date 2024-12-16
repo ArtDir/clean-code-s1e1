@@ -103,6 +103,11 @@
   text-decoration: line-through;
 }
 
+.task__item_completed .task__label {
+  color: #888;
+  text-decoration: line-through;
+}
+
 .task__item_editing .task__input {
   display: inline-block;
   width: 224px;
