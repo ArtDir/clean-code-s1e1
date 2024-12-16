@@ -88,8 +88,6 @@ var editTask = function() {
   console.log("Change 'edit' to 'save'");
 
   var listItem = this.parentNode;
-  listItem.className = "task__item task__item_editing";
-
   var editInput = listItem.querySelector(".task__input");
   var label = listItem.querySelector(".task__label");
   var editBtn = listItem.querySelector(".button_edit");
@@ -97,15 +95,17 @@ var editTask = function() {
 
   //If class of the parent is .edit-mode
   if (containsClass) {
-    //switch to .edit-mode
+    //switch from .edit-mode
     //label becomes the inputs value.
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
     editBtn.setAttribute("aria-label", "Edit '" + label.innerText + "' task");
+    editInput.classList.add("task__input_hidden");
   } else {
     editInput.value = label.innerText;
     editBtn.innerText = "Save";
     editBtn.setAttribute("aria-label", "Save '" + label.innerText + "' task");
+    editInput.classList.remove("task__input_hidden");
   }
 
   //toggle .edit-mode on the parent.
