@@ -100,16 +100,17 @@ var editTask = function() {
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
     editBtn.setAttribute("aria-label", "Edit '" + label.innerText + "' task");
+    listItem.classList.toggle("task__item_editing");
     editInput.classList.add("task__input_hidden");
   } else {
     editInput.value = label.innerText;
     editBtn.innerText = "Save";
     editBtn.setAttribute("aria-label", "Save '" + label.innerText + "' task");
     editInput.classList.remove("task__input_hidden");
+    listItem.classList.toggle("task__item_editing");
   }
 
   //toggle .edit-mode on the parent.
-  listItem.classList.toggle("task__item_editing");
 }
 
 //Delete task.
